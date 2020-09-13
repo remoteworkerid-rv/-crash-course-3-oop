@@ -1,3 +1,16 @@
-class PersegiPanjang():
+from geometri.bangun_ruang import BangunRuang
+
+
+class PersegiPanjang(BangunRuang):
+    def __init__(self, p, l):
+        #fungsi pertama kali dipanggil ketika objek diciptakan
+        self.p = p
+        self.l = l
+
+
     def info(self):
-        return 'Modul menghitung rumus-rumus persegi panjang'
+        return f'Ini adalah objek dari persegi panjang dengan panjang {self.p} dan lebar {self.l}'
+
+
+    def hitung_luas(self):
+        return self.p * self.l
